@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+#controls{
+    width:90%;
+    height:480px;
+    box-shadow:2px 2px 80px black;
+    margin-left:15px;
+    transition:0.3s;
+}
+Svg{
+    width:150px;
+    height:150px;
+    box-shadow:2px 2px 50px black;
+    border-radius:200px;
+    margin-top:160px;
+    margin-left:80px;
+    
+}
+
+#res{
+    fill:none;
+    stroke:blue;
+    stroke-dasharray:20;
+    stroke-dashoffset:0;
+    animation:bo 40s linear;
+    stroke-width:60px;
+    display:block ;
+
+    
+}
+
+circle{
+    fill:none;
+    stroke:red;
+    stroke-dasharray:0;
+    stroke-dashoffset:0;
+    animation:borde 40s linear;
+    stroke-width:60px;
+    display:block ;
+    
+}
+@keyframes borde {
+    from{
+        stroke-dasharray:1;
+    }
+    to{
+        stroke-dashoffset:0;
+    }
+
+}
+@keyframes bo{ 
+ from{
+        stroke-dasharray:0;
+    }
+
+}
+</style>
+	<title></title>
+</head>
+<body>
+ <div id="controls" onclick=' this.style.backgroundColor
+    = "rgb("+ Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256)+")"'>
+      
+      <svg id="Svg" onclick=' this.style.backgroundColor
+    = "rgb("+ Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256)+")"'>
+    
+            <circle  cx="75" cy="75" r="10" dur=60s ></circle>
+            <circle  id="res" cx="75" cy="75" r="10 "></circle>
+       </svg>
+        </div>
+</body>
+</html>
